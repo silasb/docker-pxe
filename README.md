@@ -8,7 +8,6 @@ https://registry.hub.docker.com/u/mcandre/docker-pxe/
 
 ```
 $ docker run -d -p 69:69/udp --cap-add=NET_ADMIN mcandre/docker-pxe
-
 $ qemu-system-x86_64 -no-acpi -boot n -bootp tftp://$(boot2docker ip)/pxelinux.0
 ```
 
