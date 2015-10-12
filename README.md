@@ -8,7 +8,7 @@ https://registry.hub.docker.com/u/mcandre/docker-pxe/
 
 ```
 $ docker run -d -p 69:69/udp --cap-add=NET_ADMIN mcandre/docker-pxe
-$ qemu-system-x86_64 -no-acpi -boot n -bootp tftp://$(boot2docker ip)/pxelinux.0
+$ qemu-system-x86_64 -no-acpi -boot n -bootp tftp://$(docker-machine ip default)/pxelinux.0
 ```
 
 # REQUIREMENTS
@@ -35,8 +35,7 @@ $ sudo yum install docker-io qemu
 ## non-Linux
 
 * [VirtualBox](https://www.virtualbox.org/)
-* [Vagrant](https://www.vagrantup.com/)
-* [boot2docker](http://boot2docker.io/)
+* [Docker Toolbox](https://www.docker.com/toolbox)
 
 ### Mac OS X
 
@@ -45,8 +44,7 @@ $ sudo yum install docker-io qemu
 * [brew-cask](http://caskroom.io/)
 
 ```
-$ brew cask install virtualbox vagrant
-$ brew install boot2docker qemu
+$ brew cask install dockertoolbox
 ```
 
 ### Windows
@@ -54,5 +52,7 @@ $ brew install boot2docker qemu
 * [Chocolatey](https://chocolatey.org/)
 
 ```
-> chocolatey install docker qemu
+> chocolatey install virtualbox make
 ```
+
+* [DockerToolbox-1.8.2c.exe](https://github.com/docker/toolbox/releases/download/v1.8.2c/DockerToolbox-1.8.2c.exe)
