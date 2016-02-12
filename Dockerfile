@@ -8,4 +8,4 @@ RUN apt-get update && \
     chown -R nobody:nogroup /tftpboot
 COPY dnsmasq.conf /etc/dnsmasq.conf
 EXPOSE 69/udp
-ENTRYPOINT /usr/sbin/dnsmasq -k
+ENTRYPOINT ["/usr/sbin/dnsmasq", "-k"]
